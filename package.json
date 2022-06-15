@@ -1,0 +1,19 @@
+{
+    "name": "@code-rabbits/format-helper",
+    "version": "0.1.0",
+    "description": "FormatHelper",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/code-rabbits-team/FormatHelper.git"
+    },
+    "devDependencies": {
+        "typescript": "^4.5.4"
+    }
+}
