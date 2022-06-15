@@ -19,21 +19,9 @@ jobs:
       - name: Move dependency file
         working-directory: ./dist
         run: mv ../package.json ./package.json
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
-      - name: npm ci
+      - run: npm ci
         working-directory: ./dist
-        run: npm ci
-      - name: npm publish 
-        working-directory: ./dist
-        run: npm publish --access public
+      - run: npm publish --access public
+        working-directory: ./dist       
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
